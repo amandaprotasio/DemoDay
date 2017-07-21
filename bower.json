@@ -1,0 +1,20 @@
+{
+  "name": "DemoDay",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.5",
+    "angularfire": "^2.3.0",
+    "angular-ui-router": "ui-router#^1.0.5",
+    "bootstrap": "^3.3.7"
+  }
+}
