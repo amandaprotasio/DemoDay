@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="css/custom_cadastro_review.css">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Didact+Gothic|Palanquin|Roboto|Roboto+Slab|Helvetica|Merryweather|Playfair+Display|Poppins|Quicksand|Varela+Round|Hammersmith+One" rel="stylesheet">
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+<!-- ************************* Início ********************************-->
+<section class="login_principal container">
+  <div class="form-group">
+    <label>Nome</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Digite aqui seu Nome..." ng-model="dados.nome">
+  </div>
+
+  <div class="form-group">
+    <label>Sobrenome</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Digite aqui seu Sobrenome..." ng-model="dados.sobrenome">
+  </div>
+
+  <div class="form-group">
+    <label>E-Mail</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Digite aqui seu E-Mail..." ng-model="dados.email">
+  </div>
+
+  <div class="form-group">
+    <label>Senha</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Digite aqui sua senha..." ng-model="dados.senha">
+  </div>
+
+<button class="botao_cadastro" ng-click="cadastrar()"> Cadastro </button>
+</section>

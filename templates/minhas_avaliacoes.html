@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="css/custom_minhas_avaliacoes.css">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Didact+Gothic|Palanquin|Roboto|Roboto+Slab|Helvetica|Merryweather|Playfair+Display|Poppins|Quicksand|Varela+Round|Hammersmith+One" rel="stylesheet">
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+<!-- ************************* Início ********************************-->
+<label>Novo Produto</label> <a ui-sref="painel_usuario"><i class="fa fa-backward"></i></a>
+
+<table>
+        <tr>
+          <th class="t_imagem"></th>
+          <th class="t_nome">Nome</th>
+          <th class="t_aval">Avaliação</th>
+          <th class="t_comment">Comentário</th>
+          <th class="t_exclusao"></th>
+          <th class="t_adicao"><a ui-sref="cadastro_review"><span class="table-add fa fa-plus"></span></a></th>
+        <tr ng-repeat="review in reviews" ng-if="review.usuario_uid==usuario.uid">
+
+            <td> <img class="imagem" ng-src="{{review.imagem}}"></td>
+            <td class="nome">{{review.nome}}</td>
+            <td class="score">{{review.score}}</td>
+            <td class="comentario">{{review.comment}}</td>
+            <td><span class="fa fa-times table-remove" ng-click="excluir(review)"></span></td>
+            <td></td>
+
+        </tr>
+</table>
+
+</section>

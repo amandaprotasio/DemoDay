@@ -1,0 +1,34 @@
+<link rel="stylesheet" href="css/custom_cadastro_review.css">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Didact+Gothic|Palanquin|Roboto|Roboto+Slab|Helvetica|Merryweather|Playfair+Display|Poppins|Quicksand|Varela+Round|Hammersmith+One" rel="stylesheet">
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+<!-- ************************* Início ********************************-->
+
+<div class="form-group bloco">
+  <label>Novo Produto</label> <a ui-sref="painel_usuario"><i class="fa fa-backward"></i></a>
+  <input type="text" class="form-control" placeholder="Digite aqui o Nome do Produto..." ng-model="dados.nome">
+  <input type="url" class="form-control" placeholder="Foto | URL" ng-model="dados.imagem">
+
+  <div class="stars">
+  <label class="aval"> Qual nota você dá para esse produto? </label>
+  <form action="">
+    <input class="fa fa-heart star-5" id="star-5" type="radio" ng-model="dados.score" value = "5" name="star"/>
+    <label class="fa fa-heart star-5" for="star-5"></label>
+    <input class="fa fa-heart star-4" id="star-4" type="radio" ng-model="dados.score" value = "4" name="star"/>
+    <label class="fa fa-heart star-4" for="star-4"></label>
+    <input class="fa fa-heart star-3" id="star-3" type="radio" ng-model="dados.score" value = "3" name="star"/>
+    <label class="fa fa-heart star-3" for="star-3"></label>
+    <input class="fa fa-heart star-2" id="star-2" type="radio" ng-model="dados.score" value = "2" name="star"/>
+    <label class="fa fa-heart star-2" for="star-2"></label>
+    <input class="fa fa-heart star-1" id="star-1" type="radio" ng-model="dados.score" value = "1" name="star"/>
+    <label class="fa fa-heart star-1" for="star-1"></label>
+  </form>
+</div>
+
+  <textarea class="form-control" cols="40" id="message" name="message" rows="10" ng-model="dados.comment" placeholder="Escreva a sua avaliação em 500, no máximo, caracteres" maxlength="500"></textarea>
+  <button class="botao_cadastro" ng-click="cadastrar_review()"> Cadastrar Análise </button>
+</div>
+
+
+</section>

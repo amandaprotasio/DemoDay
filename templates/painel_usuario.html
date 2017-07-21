@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="css/custom_painel_usuario.css">
+<link href="https://fonts.googleapis.com/css?family=Didact+Gothic|Palanquin|Roboto|Roboto+Slab|Helvetica|Merryweather|Playfair+Display|Poppins|Quicksand|Varela+Round|Hammersmith+One" rel="stylesheet">
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+<!-- ************************* Início ********************************-->
+<h1> Olá, {{usuario.nome}} </h1> <button class="btn btn-danger logout" type="submit" ng-click="logout()">Logout</button>
+
+<div class="container">
+
+  <div class='spacer'>
+    <a href="javascript://" class='wide blue' ui-sref="cadastro_review">
+      <i class="fa fa-thermometer-full"></i>
+      <h2>Faça sua análise</h2>
+    </a>
+    <a href="javascript://" class='wide orange' ui-sref="minhas_avaliacoes">
+      <i class="fa fa-book"></i>
+      <h2>Reveja suas análises</h2>
+    </a>
+    <div ng-show='{{admin}}=1'>
+    <a href="javascript://" class='wide redgay'>
+      <i class="fa fa-pencil-square-o" ></i>
+      <h2>Cadastro de Produtos</h2>
+    </a>
+  </div>
+  </div>
+
+</div>
