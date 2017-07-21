@@ -2,6 +2,7 @@ angular.module('seraqueehbom').controller("MinhasAController", MinhasAController
 
 function MinhasAController($scope, $firebaseArray, $firebaseAuth){
     var ref = firebase.database().ref('reviews');
+    var admin;
     $scope.reviews = $firebaseArray(ref);
     $scope.excluir = excluir;
 ////////////////////////////////////////////////////////////////////////////////
@@ -15,6 +16,15 @@ function MinhasAController($scope, $firebaseArray, $firebaseAuth){
             return;
         }
           $scope.usuario = firebaseUser;
+
+
+
+          if ($scope.usuario.uid=='Hi5AKosKGfN8OKfPoPUcgAv3pTS2'){
+            $scope.admin = true;
+          } else{
+            $scope.admin = false;
+            }
+            console.log($scope.admin);
         }
 ////////////////////////////////////////////////////////////////////////////////
 

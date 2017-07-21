@@ -39,9 +39,9 @@ function PainelUController($scope, $firebaseAuth, $state, $firebaseArray, $fireb
 //      console.log($scope.usuario);
 
 if ($scope.user.uid=='Hi5AKosKGfN8OKfPoPUcgAv3pTS2'){
-  $scope.admin = 1;
+  $scope.admin = true;
 } else{
-  $scope.admin = 0;
+  $scope.admin = false;
   }
 console.log(admin);
 
