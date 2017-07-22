@@ -7,7 +7,7 @@ h1                                                                              
 
 /* COMO FUNCIONA
 =================================================================================================================================== */
-section.funcionamento.background                                                {position: relative; width: 100%; height: 350px; z-index: -1; margin: 0 0 0 0; background-image: url('../images/background_funcionamento_edit.jpeg'); background-size:cover;background-position: center right; background-repeat: no-repeat;}
+section.funcionamento.background                                                {position: relative; width: 100%; height: 350px;  margin: 0 0 0 0; background-image: url('../images/background_funcionamento_edit.jpeg'); background-size:cover;background-position: center right; background-repeat: no-repeat;}
 section.funcionamento p.title_1                                                 {color: white;font-family: 'Helvetica', sans-serif; font-size:32px; }
 
 section.funcionamento div.lateral_esquerda                                      {width:50%}
@@ -21,10 +21,15 @@ section.funcionamento div.container-1 input#search::-moz-placeholder            
 section.funcionamento div.container-1 input#search:-ms-input-placeholder        {color: #65737e;}
 section.funcionamento div.container-1 span.icon                                 {position: absolute; top: 50%; margin-left: 11px; margin-top: 0px; z-index: 1; color: #4f5b66; font-size: 22px;}
 
+
+input[type='radio']:after                                                       { width: 15px; height: 15px;  border-radius: 15px; top: -2px; left: -1px; position: relative; background-color: #fff; content: ''; display: inline-block; visibility: visible; border: 2px solid white;}
+input[type='radio']:checked:after                                               { width: 15px; height: 15px; border-radius: 15px; top: -2px; left: -1px; position: relative; background-color: #111; content: ''; display: inline-block; visibility: visible; border: 2px solid white;}
+section.funcionamento span.alternativa                                          { font-family: 'Helvetica'; color:white; font-weight: 500;}
+
 /* AVALIAÇÃO
 =================================================================================================================================== */
 section.avaliacao                                                               {display: block;}
-section.avaliacao div.linha                                                       {display: flex;}
+section.avaliacao div.linha                                                     {display: flex;}
 section.avaliacao img                                                           {width:100%; height:300px;}
 section.avaliacao p.nome                                                        {font-size: 18px; font-weight: 400; color: black; width:90%;}
 section.avaliacao p.nota_avaliacao                                              {font-size: 18px; font-weight: 400; color: #FF4175;}

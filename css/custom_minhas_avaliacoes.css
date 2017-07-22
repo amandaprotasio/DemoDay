@@ -20,3 +20,5 @@ th.t_aval                                                                       
 th.t_comment                                                                    {width:33%;}
 th.t_exclusao                                                                   {width:4.5%;}
 th.t_adicao                                                                     {width:4.5%;}
+i                                                                               {padding-right: 1px;}
+td.nota_avaliacao                                                                {font-size: 18px; font-weight: 400; color: #FF4175;}
