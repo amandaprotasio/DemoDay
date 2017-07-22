@@ -10,17 +10,18 @@
 <div class="lateral_esquerda">
   <div class="box">
     <div class="container-1">
-      <p class="title_2"> Qual produto você quer saber a avaliação?</p>
+      <p class="title_2"> De qual produto estamos falando?</p>
       <span class="icon"><i class="fa fa-search" aria-hidden="true"></i></span>
-      <input type="search" id="search" placeholder="Search..." />
+      <input type="search" id="search" placeholder="Produto" />
   </div>
 </div>
 
 <div class="box">
   <div class="container-1">
-      <p class="title_2"> Ou nos diga qual produto você quer avaliar:</p>
-      <span class="icon"><i class="fa fa-search" aria-hidden="true"></i></span>
-      <input type="search" id="search" placeholder="Search..." />
+      <p class="title_2"> Você quer:</p>
+      <div class = "linha_opt"><input type="radio" name="optionsRadios" id="optionsRadios1" required checked> <span class="alternativa"> Buscar avaliações do produto </span></div>
+      <div class = "linha_opt"><input type="radio" name="optionsRadios" id="optionsRadios2" required> <span class="alternativa"> Avaliar o produto </span></div>
+
   </div>
 </div>
 </div>
@@ -29,7 +30,30 @@
 <section class="avaliacao">
 <h1> <i class="fa fa-heart" aria-hidden="true"></i> Você sabe quais são os produtos mais amados? </h1>
   <div class="container-fluid linha">
-    <div class="produto">
+    <table>
+
+
+
+
+              <div class="produto" ng-repeat="review in reviews | orderBy:random | limitTo:4 ">
+
+                <p> <img class="imagem" ng-src="{{review.imagem}}"></p>
+                <p class="nome">{{review.nome}}</p>
+                <p class="score">{{review.score}}</p>
+                <p class="nota_avaliacao">
+                  <i class="fa fa-heart" aria-hidden="true" ng-show="review.score>=1"></i>
+                  <i class="fa fa-heart" aria-hidden="true" ng-show="review.score>=2"></i>
+                  <i class="fa fa-heart" aria-hidden="true" ng-show="review.score>=3"></i>
+                  <i class="fa fa-heart" aria-hidden="true" ng-show="review.score>=4"></i>
+                  <i class="fa fa-heart" aria-hidden="true" ng-show="review.score>=5"></i>
+                </p>
+                <p class="comentario">{{review.comment}}</p>
+
+
+            </div>
+
+    </table>
+    <!-- <div class="produto">
       <img src="images/kitchen_aid_batedeira.jpg" alt="Batedeira Kitchen Aid Vermelha" class="img-responsive center-block">
       <p class="nome"> Batedeira Stand Mixer Artisan - Kitchen Aid</p>
       <p class="nota_avaliacao"><i class="fa fa-heart" aria-hidden="true"></i><i class="fa fa-heart" aria-hidden="true"></i><i class="fa fa-heart" aria-hidden="true"></i><i class="fa fa-heart" aria-hidden="true"></i><i class="fa fa-heart" aria-hidden="true"></i> </p>
@@ -59,7 +83,7 @@
       <p class="nota_avaliacao"><i class="fa fa-heart" aria-hidden="true"></i><i class="fa fa-heart" aria-hidden="true"></i><i class="fa fa-heart" aria-hidden="true"></i><i class="fa fa-heart" aria-hidden="true"></i> </p>
       <label class="title_3"> Comentário </label>
       <p class="comentario"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
+    </div> -->
 
   </div>
 
