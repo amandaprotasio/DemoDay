@@ -19,7 +19,7 @@ function MinhasAController($scope, $firebaseArray, $firebaseAuth){
 
 
 
-          if ($scope.usuario.uid=='Hi5AKosKGfN8OKfPoPUcgAv3pTS2'){
+          if ($scope.usuario.uid=='DDBErNuQM4dShZ4k5sfHIhx8L7F2'){
             $scope.admin = true;
           } else{
             $scope.admin = false;

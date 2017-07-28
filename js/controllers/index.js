@@ -1,6 +1,16 @@
-angular.module('seraqueehbom').controller("PainelUController", PainelUController);
+var app = angular.module('seraqueehbom')
 
-function PainelUController($scope, $firebaseAuth, $state, $firebaseArray, $firebaseObject){
+// app.factory("Auth", ["$firebaseAuth",
+//   function($firebaseAuth) {
+//     return $firebaseAuth();
+//   }
+// ]);
+
+app.controller("IndexController", IndexController);
+
+
+
+function IndexController($scope, $firebaseAuth, $state, $firebaseArray, $firebaseObject){
   var auth = $firebaseAuth();
   var admin;
 
@@ -21,6 +31,7 @@ function PainelUController($scope, $firebaseAuth, $state, $firebaseArray, $fireb
       // nula. Usamos esse if para evitar erros no console ao fazer o logout,
       // já que isso causa uma mudança no status e faz com que essa função
       // seja executada novamente.
+      $scope.firebaseUser=firebaseUser;
       if(! firebaseUser){
           return;
       }
@@ -28,7 +39,7 @@ function PainelUController($scope, $firebaseAuth, $state, $firebaseArray, $fireb
       // Os dados do usuário devem ficar disponíveis no DOM, para que possamos
       // exibir o seu email na tela.
       $scope.user = firebaseUser;
-
+      console.log(firebaseUser);
       // Já que os dados do usuário já estão carregados, podemos acessar
       // o objeto que armazena as listas do usuário através do seu id.
       ref = firebase.database().ref('users').child($scope.user.uid);
@@ -37,13 +48,6 @@ function PainelUController($scope, $firebaseAuth, $state, $firebaseArray, $fireb
       $scope.usuario = $firebaseObject(ref);
 
 //      console.log($scope.usuario);
-
-if ($scope.user.uid=='DDBErNuQM4dShZ4k5sfHIhx8L7F2'){
-  $scope.admin = true;
-} else{
-  $scope.admin = false;
-  }
-console.log(admin);
 
   }
 
