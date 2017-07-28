@@ -40,6 +40,11 @@ function rotas($stateProvider, $urlRouterProvider){
         url: '/minhas_avaliacoes'
     });
 
+    $stateProvider.state('index', {
+        templateUrl: 'index.html',
+        controller: 'IndexController'
+    });
+
     // O $urlRouterProvider permite, entre outras coisas, que seja definida
     // uma rota padrão que usada como padrão caso nenhuma outra rota esteja
     // em efeito.
