@@ -6,28 +6,34 @@
 <!-- ************************* Início ********************************-->
 
 <div class="form-group bloco">
+<!-- <form name="registration"> -->
+<form name="registration">
   <label>Novo Produto</label> <a ui-sref="painel_usuario"><i class="fa fa-backward"></i></a>
-  <input type="text" class="form-control" placeholder="Digite aqui o Nome do Produto..." ng-model="dados.nome">
-  <input type="url" class="form-control" placeholder="Foto | URL" ng-model="dados.imagem">
-
+  <input name="nome" type="text" class="form-control" placeholder="Digite aqui o Nome do Produto..." ng-model="dados.nome" required>
+  <span ng-show="registration.nome.$touched && registration.nome.$invalid">Preenchimento obrigatório</span>
+  <input name="imagem" type="url" class="form-control" placeholder="Foto | URL" ng-model="dados.imagem" required>
+  <span ng-show="registration.imagem.$touched && registration.imagem.$invalid">Preenchimento obrigatório</span>
+</form>
   <div class="stars">
   <label class="aval"> Qual nota você dá para esse produto? </label>
-  <form action="">
-    <input class="fa fa-heart star-5" id="star-5" type="radio" ng-model="dados.score" value = "5" name="star"/>
+  <form action="" name="registration3">
+    <input class="fa fa-heart star-5" id="star-5" type="radio" ng-model="dados.score" value = "5" name="star" required/>
     <label class="fa fa-heart star-5" for="star-5"></label>
-    <input class="fa fa-heart star-4" id="star-4" type="radio" ng-model="dados.score" value = "4" name="star"/>
+    <input class="fa fa-heart star-4" id="star-4" type="radio" ng-model="dados.score" value = "4" name="star" required/>
     <label class="fa fa-heart star-4" for="star-4"></label>
-    <input class="fa fa-heart star-3" id="star-3" type="radio" ng-model="dados.score" value = "3" name="star"/>
+    <input class="fa fa-heart star-3" id="star-3" type="radio" ng-model="dados.score" value = "3" name="star" required/>
     <label class="fa fa-heart star-3" for="star-3"></label>
-    <input class="fa fa-heart star-2" id="star-2" type="radio" ng-model="dados.score" value = "2" name="star"/>
+    <input class="fa fa-heart star-2" id="star-2" type="radio" ng-model="dados.score" value = "2" name="star" required/>
     <label class="fa fa-heart star-2" for="star-2"></label>
-    <input class="fa fa-heart star-1" id="star-1" type="radio" ng-model="dados.score" value = "1" name="star"/>
+    <input class="fa fa-heart star-1" id="star-1" type="radio" ng-model="dados.score" value = "1" name="star" required/>
     <label class="fa fa-heart star-1" for="star-1"></label>
   </form>
 </div>
-
-  <textarea class="form-control" cols="40" id="message" name="message" rows="10" ng-model="dados.comment" placeholder="Escreva a sua avaliação em 500, no máximo, caracteres" maxlength="500"></textarea>
-  <button class="botao_cadastro" ng-click="cadastrar_review()"> Cadastrar Análise </button>
+<form name="registration2">
+  <textarea name="comentario" class="form-control" cols="40" id="message" name="message" rows="10" ng-model="dados.comment" placeholder="Escreva a sua avaliação em 500, no máximo, caracteres" maxlength="500" required></textarea>
+  <span ng-show="registration2.comentario.$touched && registration2.comentario.$invalid">Preenchimento obrigatório</span>
+</form>
+  <button class="botao_cadastro" ng-disabled="registration.nome.$invalid || registration.imagem.$invalid || registration2.comentario.$invalid || registration3.star.$error.required" ng-click="cadastrar_review()"> Cadastrar Análise </button>
 </div>
 
 

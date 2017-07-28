@@ -1,29 +1,34 @@
-<link rel="stylesheet" href="css/custom_cadastro_review.css">
+<link rel="stylesheet" href="css/custom_cadastro_usuario.css">
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Didact+Gothic|Palanquin|Roboto|Roboto+Slab|Helvetica|Merryweather|Playfair+Display|Poppins|Quicksand|Varela+Round|Hammersmith+One" rel="stylesheet">
 <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 
 <!-- ************************* Início ********************************-->
 <section class="login_principal container">
+<form name="registration">
   <div class="form-group">
     <label>Nome</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Digite aqui seu Nome..." ng-model="dados.nome">
+    <input name="nome" type="text" class="form-control" id="exampleInputEmail1" placeholder="Digite aqui seu Nome..." ng-model="dados.nome" required>
+    <span ng-show="registration.nome.$touched && registration.nome.$invalid">Preenchimento obrigatório</span>
   </div>
 
   <div class="form-group">
     <label>Sobrenome</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Digite aqui seu Sobrenome..." ng-model="dados.sobrenome">
+    <input name="sobrenome" type="text" class="form-control" id="exampleInputEmail1" placeholder="Digite aqui seu Sobrenome..." ng-model="dados.sobrenome" required>
+    <span ng-show="registration.sobrenome.$touched && registration.sobrenome.$invalid">Preenchimento obrigatório</span>
   </div>
 
   <div class="form-group">
     <label>E-Mail</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Digite aqui seu E-Mail..." ng-model="dados.email">
+    <input name="email" type="email" class="form-control" id="exampleInputEmail1" placeholder="Digite aqui seu E-Mail..." ng-model="dados.email" required>
+    <span ng-show="registration.email.$touched && registration.email.$invalid">Preenchimento obrigatório</span>
   </div>
 
   <div class="form-group">
     <label>Senha</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Digite aqui sua senha..." ng-model="dados.senha">
+    <input name="senha" type="password" class="form-control" id="exampleInputPassword1" placeholder="Digite aqui sua senha..." ng-model="dados.senha" required>
+    <span ng-show="registration.senha.$touched && registration.senha.$invalid">Preenchimento obrigatório</span>
   </div>
-
-<button class="botao_cadastro" ng-click="cadastrar()"> Cadastro </button>
+</form>
+<button class="botao_cadastro" ng-disabled="registration.nome.$invalid || registration.email.$invalid || registration.sobrenome.$invalid || registration.senha.$invalid" ng-click="cadastrar()"> Cadastro </button>
 </section>

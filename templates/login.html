@@ -1,14 +1,17 @@
 <link href="../css/custom_login.css" rel="stylesheet">
 <section class="login_principal container">
+<form name="registration">
   <div class="form-group">
     <label>E-Mail</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Digite aqui seu E-Mail..." ng-model="dados.email">
+    <input name="email" type="email" class="form-control" id="exampleInputEmail1" placeholder="Digite aqui seu E-Mail..." ng-model="dados.email" required>
+    <span ng-show="registration.email.$touched && registration.email.$invalid">Preenchimento obrigatório</span>
   </div>
 
   <div class="form-group">
     <label>Senha</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Digite aqui sua senha..." ng-model="dados.senha">
+    <input name="senha" type="password" class="form-control" id="exampleInputPassword1" placeholder="Digite aqui sua senha..." ng-model="dados.senha" required>
+    <span ng-show="registration.senha.$touched && registration.senha.$invalid">Preenchimento obrigatório</span>
   </div>
-
-<button class="botao_cadastro" ng-click="login()"> Login </button>
+</form>
+<button class="botao_login" ng-disabled="registration.email.$invalid || registration.senha.$invalid" ng-click="login()"> Login </button>
 </section>

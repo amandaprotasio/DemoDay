@@ -3,20 +3,25 @@
 <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 
 <!-- ************************* Início ********************************-->
-<h1> Olá, {{usuario.nome}} </h1> <button class="btn btn-danger logout" type="submit" ng-click="logout()">Logout</button>
+<h1> Olá, {{usuario.nome}} </h1>
+<!-- <button class="btn btn-danger logout" type="submit" ng-click="logout()">Logout</button> -->
 
-<div class="container">
+<div class="container-fluid linha">
 
   <div class='spacer'>
+    <div class="sm-col-4">
     <a href="javascript://" class='wide blue' ui-sref="cadastro_review">
       <i class="fa fa-thermometer-full"></i>
       <h2>Faça sua análise</h2>
     </a>
+  </div>
+  <div class="sm-col-4">
     <a href="javascript://" class='wide orange' ui-sref="minhas_avaliacoes">
       <i class="fa fa-book"></i>
       <h2>Reveja suas análises</h2>
     </a>
-    <div ng-show='admin'>
+  </div>
+    <div ng-show='admin sm-col-4'>
     <a href="javascript://" class='wide redgay'>
       <i class="fa fa-pencil-square-o" ></i>
       <h2>Cadastro de Produtos</h2>
