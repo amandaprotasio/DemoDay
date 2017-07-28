@@ -42,41 +42,41 @@
                   <div class="col-sm-4">
                     <ul class="multi-column-dropdown">
                       <li class="title">Eletrônicos</li>
-                      <li><a href="#">Computadores e Acessórios</a></li>
-                      <li><a href="#">Celulares e Acessórios</a></li>
-                      <li><a href="#">TV, Audio e Home Theater</a></li>
-                      <li><a href="#">Câmera e Fotografia</a></li>
-                      <li><a href="#">Escritório</a></li>
-                      <li><a href="#">GPS e Acessórios para Automóveis</a></li>
-                      <li><a href="#">Videogames</a></li>
-                      <li><a href="#">Instrumentos Musicais</a></li>
+                      <li><a class="subsecao" href="#">Computadores e Acessórios</a></li>
+                      <li><a class="subsecao" href="#">Celulares e Acessórios</a></li>
+                      <li><a class="subsecao" href="#">TV, Audio e Home Theater</a></li>
+                      <li><a class="subsecao" href="#">Câmera e Fotografia</a></li>
+                      <li><a class="subsecao" href="#">Escritório</a></li>
+                      <li><a class="subsecao" href="#">GPS e Acessórios para Automóveis</a></li>
+                      <li><a class="subsecao" href="#">Videogames</a></li>
+                      <li><a class="subsecao" href="#">Instrumentos Musicais</a></li>
                     </ul>
                   </div>
                   <div class="col-sm-4">
                     <ul class="multi-column-dropdown">
                       <li class="title">Casa e Cozinha</li>
-                      <li><a href="#">Móveis e Decoração</a></li>
-                      <li><a href="#">Cozinha</a></li>
-                      <li><a href="#">Eletrodomésticos</a></li>
-                      <li><a href="#">Jardinagem</a></li>
-                      <li><a href="#">Papelaria</a></li>
+                      <li><a class="subsecao" href="#">Móveis e Decoração</a></li>
+                      <li><a class="subsecao" href="#">Cozinha</a></li>
+                      <li><a class="subsecao" href="#">Eletrodomésticos</a></li>
+                      <li><a class="subsecao" href="#">Jardinagem</a></li>
+                      <li><a class="subsecao" href="#">Papelaria</a></li>
                       <li role="separator" class="divider"></li>
                       <li class="title">Moda e Perfumaria</li>
-                      <li><a href="#">Roupas Masculinas</a></li>
-                      <li><a href="#">Roupas Femininas</a></li>
+                      <li><a class="subsecao" href="#">Roupas Masculinas</a></li>
+                      <li><a class="subsecao" href="#">Roupas Femininas</a></li>
                     </ul>
                   </div>
                   <div class="col-sm-4">
                     <ul class="multi-column-dropdown">
                       <li class="title">Bem Estar</li>
-                      <li><a href="#">Alimentação</a></li>
-                      <li><a href="#">Beleza e Perfumaria</a></li>
-                      <li><a href="#">Brinquedos</a></li>
-                      <li><a href="#">4</a></li>
-                      <li><a href="#">5</a></li>
-                      <li><a href="#">6</a></li>
-                      <li><a href="#">7</a></li>
-                      <li><a href="#">8</a></li>
+                      <li><a class="subsecao" href="#">Alimentação</a></li>
+                      <li><a class="subsecao" href="#">Beleza e Perfumaria</a></li>
+                      <li><a class="subsecao" href="#">Brinquedos</a></li>
+                      <li><a class="subsecao" href="#">4</a></li>
+                      <li><a class="subsecao" href="#">5</a></li>
+                      <li><a class="subsecao" href="#">6</a></li>
+                      <li><a class="subsecao" href="#">7</a></li>
+                      <li><a class="subsecao" href="#">8</a></li>
                     </ul>
                   </div>
 
@@ -88,10 +88,16 @@
             </li>
           </ul>
       </div><!-- /.navbar-collapse -->
-      <div class="col-sm-4 navbar-right btn_login_pos">
+      <div class="col-sm-4 navbar-right btn_login_pos" ng-controller="IndexController">
       <ul class="nav navbar-nav navbar-right btn">
-        <li class="botoes"><a ui-sref="login" class="round green">Login<span class="round">Se você já faz parte da nossa família</span></a></li>
-        <li class="botoes"><a ui-sref="cadastro_usuario" class="round red">Cadastre-se!<span class="round">Para fazer sua opinião ser ouvida </span></a></li>
+        <li ng-hide="firebaseUser"><i class="fa fa-user-o usuario" aria-hidden="true"></i>
+            <a ui-sref="login" class="loginU"> Entre! </a>
+            <a ui-sref="cadastro_usuario" class="cadastroU">ou cadastre-se </a></li>
+        <li ng-show="firebaseUser"><i class="fa fa-user-o usuario" aria-hidden="true"></i>
+            <span class="loginU"> {{usuario.nome}} </span>
+            <a ui-sref="home" class="logoutU" ng-click="logout()"> Logout </a></li>
+
+
       </ul>
       </div>
     </div> <!-- /.row -->
@@ -140,6 +146,7 @@
 <script src="js/controllers/painel_usuario.js"></script>
 <script src="js/controllers/minhas_avaliacoes.js"></script>
 <script src="js/controllers/login.js"></script>
+<script src="js/controllers/index.js"></script>
 
 </body>
 </html>
