@@ -1,0 +1,30 @@
+button.botao_cadastro                                                           {background: #2ecc71; border: 0; color: #fff; padding: 10px; font-size: 20px; width: 60%; margin: 3% 0 3% 0; display: block; cursor: pointer;}
+button.botao_cadastro:disabled                                                  {background: #2ecc71; border: 0; color: #fff; padding: 10px; font-size: 20px; width: 60%; margin: 3% 0 3% 0; display: block; cursor: not-allowed;}
+input.form-control                                                              {width: 60%;}
+span                                                                            {color: red; font-size: 12px;}
+
+@media screen and (min-width: 770px)                                            {
+
+}
+
+@media screen and (min-width: 751px) and (max-width:850px)                      {
+                                                                                }
+
+@media screen and (min-width: 630px) and (max-width:750px)                      {
+                                                                                }
+
+@media screen and (min-width: 470px) and (max-width:629px)                      {input.form-control{width: 470px;}
+                                                                                 button.botao_cadastro:disabled{width: 470px;}
+                                                                                 button.botao_cadastro{width: 470px;}
+																																								}
+
+@media screen and (min-width: 350px) and (max-width:469px)                      {input.form-control{width: 350px;}
+                                                                                 button.botao_cadastro:disabled{width: 350px;}
+                                                                                 button.botao_cadastro{width: 350px;}
+																																								}
+
+
+@media (max-width:349px)                                                        {input.form-control{width: 95%;}
+                                                                                 button.botao_cadastro:disabled{width: 95%;}
+                                                                                 button.botao_cadastro{width: 95%;}
+                                                                                }

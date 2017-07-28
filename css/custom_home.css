@@ -10,9 +10,11 @@ h1                                                                              
 section.funcionamento.background                                                {position: relative; width: 100%; height: 350px;  margin: 0 0 0 0; background-image: url('../images/background_funcionamento_edit.jpeg'); background-size:cover;background-position: center right; background-repeat: no-repeat;}
 section.funcionamento p.title_1                                                 {color: white;font-family: 'Helvetica', sans-serif; font-size:32px; }
 
-section.funcionamento div.lateral_esquerda                                      {width:50%}
-section.funcionamento p.title_2                                                 {color: white;font-family: 'Helvetica', sans-serif; font-size:18px; display: block;margin-top: 15%;}
-section.funcionamento div.box                                                   {margin: 20px auto; width: 100%; height: 50px; display: block;}
+section.funcionamento div.lateral_esquerda                                      {width:50%;}
+section.funcionamento div.blocao                                                {width:400px; margin-top: 2.5%; border: 1px solid #DDDDDD; height: 245px; background: rgb(34,34,34); /* for IE */ background: rgba(34,34,34,0.75); z-index: 100; position: relative;}
+section.funcionamento p.title_2                                                 {color: white;font-family: 'Helvetica', sans-serif; font-size:18px; display: block;margin-top: 8%;}
+section.funcionamento p.title_3                                                 {color: white;font-family: 'Helvetica', sans-serif; font-size:18px; display: block;margin-top: 15%;}
+section.funcionamento div.box                                                   {margin: 20px auto; width: 100%; height: 50px; display: block; margin-left: 3%;}
 section.funcionamento div.container-1                                           {width: 350px; vertical-align: middle; white-space: nowrap; position: relative;}
 section.funcionamento div.container-1 input#search                              {width: 350px; height: 50px; background: #ffffff; border: none; font-size: 10pt; color: #63717f; padding-left: 45px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; display: block;}
 section.funcionamento div.container-1 input#search::-webkit-input-placeholder   {color: #65737e;}
@@ -40,7 +42,57 @@ section.avaliacao p.comentario                                                  
 
 /* RESPONSIVO
 =================================================================================================================================== */
-@media screen and (max-width: 767px)                                            {section.avaliacao div.container-fluid.linha{display:inline-block;}
-                                                                                section.avaliacao div.produto{width:100%;}
-                                                                                section.avaliacao img{width: auto; left:50%;}
+@media screen and (min-width: 770px)                                            {
+
 }
+
+@media screen and (min-width: 751px) and (max-width:850px)                      {section.avaliacao div.container-fluid.linha{display:inline-block;}
+                                                                                section.avaliacao div.produto{width:100%;}
+                                                                                section.avaliacao img{width: 100%; left:50%;}
+                                                                                }
+
+@media screen and (min-width: 630px) and (max-width:750px)                      {section.avaliacao div.container-fluid.linha{display:inline-block;}
+                                                                                section.avaliacao div.produto{width:100%;}
+                                                                                section.avaliacao img{width: 100%; left:50%;}
+                                                                                }
+
+@media screen and (min-width: 470px) and (max-width:629px)                      {section.avaliacao div.container-fluid.linha{display:inline-block;}
+                                                                                section.avaliacao div.produto{width:100%;}
+                                                                                section.avaliacao img{width: 100%; left:50%;}
+                                                                                h1{font-size: 26px;}
+                                                                                section.funcionamento p.title_1{font-size: 26px;}
+                                                                                section.funcionamento p.title_2{font-size: 15px;}
+                                                                                section.funcionamento p.title_3{font-size: 15px;}
+                                                                                section.avaliacao p.nome{font-size: 15px;}
+                                                                                section.avaliacao p.nota_avaliacao{font-size: 15px;}
+                                                                                section.avaliacao p.comentario{font-size: 13px;}
+																																								}
+
+@media screen and (min-width: 350px) and (max-width:469px)                      {section.avaliacao div.container-fluid.linha{display:inline-block;}
+                                                                                section.avaliacao div.produto{width:100%;}
+                                                                                section.avaliacao img{width: 100%; left:50%;}
+                                                                                h1{font-size: 22px;}
+                                                                                section.funcionamento p.title_1{font-size: 22px;}
+                                                                                section.funcionamento p.title_2{font-size: 13px;}
+                                                                                section.funcionamento p.title_3{font-size: 13px;}
+                                                                                section.avaliacao p.nome{font-size: 13px;}
+                                                                                section.avaliacao p.nota_avaliacao{font-size: 13px;}
+                                                                                section.avaliacao p.comentario{font-size: 12px;}
+                                                                                section.funcionamento div.blocao{width:300px;margin-left: 5%;}
+                                                                                section.funcionamento div.container-1 input#search{width: 250px; height: 40px;}
+																																								}
+
+
+@media (max-width:349px)                                                        {section.avaliacao div.container-fluid.linha{display:inline-block;}
+                                                                                section.avaliacao div.produto{width:100%;}
+                                                                                section.avaliacao img{width: 100%; left:50%;}
+                                                                                h1{font-size: 18px;}
+                                                                                section.funcionamento p.title_1{font-size: 18px;}
+                                                                                section.funcionamento p.title_2{font-size: 12px;}
+                                                                                section.funcionamento p.title_3{font-size: 12px;}
+                                                                                section.avaliacao p.nome{font-size: 12px;}
+                                                                                section.avaliacao p.nota_avaliacao{font-size: 12px;}
+                                                                                section.avaliacao p.comentario{font-size: 11px;}
+                                                                                section.funcionamento div.blocao{width:300px; margin-left: 5%;}
+                                                                                section.funcionamento div.container-1 input#search{width: 250px; height: 40px;}
+                                                                                }

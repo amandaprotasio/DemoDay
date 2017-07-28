@@ -13,14 +13,23 @@ section.navegacao .dropdown-menu                                                
 section.navegacao .dropdown-menu.columns-3                                      {min-width: 1000px;}
 section.navegacao .dropdown-toggle                                              {font-size: 16px; margin-top: 5px; margin-bottom: -10px;}
 section.navegacao .dropdown-menu li.title                                       {font-weight: bold;}
-section.navegacao .dropdown-menu li a                                           {padding: 5px 15px;	font-weight: 300;}
+section.navegacao .dropdown-menu li a.subsecao                                  {padding: 5px 15px;	font-weight: 300;}
 section.navegacao .multi-column-dropdown                                        {list-style: none; }
-section.navegacao .multi-column-dropdown li a                                   {display: block; width: 260px; clear: both; line-height: 1.428571429; color: #333; white-space: normal;}
-section.navegacao .multi-column-dropdown li a:hover                             {text-decoration: none;	color: #262626;	background-color: #f5f5f5;}
+section.navegacao .multi-column-dropdown li a.subsecao                          {display: block; width: 260px; clear: both; line-height: 1.428571429; color: #333; white-space: normal;}
+section.navegacao .multi-column-dropdown li a.subsecao:hover                             {text-decoration: none;	color: #262626;	background-color: #f5f5f5;}
 section.navegacao a.navbar-brand                                                {width: 105px; padding-top: 5px;}
-section.navegacao .navbar-default .navbar-nav>li>a                              {margin-left: -20px;}
+section.navegacao .navbar-default .navbar-nav>li>a.subsecao                     {margin-left: -20px;}
+section.navegacao ul.btn                                                        {margin: 5px 10% -2px 0; text-align: center;}
+section.navegacao i.usuario																											{font-size: 34px; float: left; color: black;}
+section.navegacao ul.btn a.loginU																								{list-style: none; text-decoration: none; font-weight: 700; font-size: 14px; padding:0; text-align: left; margin-left: 45%; color: black;} 
+section.navegacao ul.btn span.loginU  																					{list-style: none; text-decoration: none; font-weight: 700; font-size: 14px; padding:0; text-align: left; margin-left: 5%; color: black;}
+section.navegacao ul.btn a.cadastroU 																						{list-style: none; text-decoration: none; font-size: 12px; padding:0;text-align: left;  margin-left: 45%;}
+section.navegacao ul.btn a.logoutU   																						{list-style: none; text-decoration: none; font-size: 12px; padding:0;text-align: left;  margin-left: 29%;}
 
-section.navegacao ul.btn                                                        {margin-top: 5px; margin-bottom: -10px; text-align: center;}
+
+
+
+
 section.navegacao li.botoes                                                     {list-style: none;position: relative; display: inline-block;width: 180px; height: 60px;}
 @-moz-keyframes rotate                                                          {0% {transform: rotate(0deg);} 100% {transform: rotate(-360deg);}}
 @-webkit-keyframes rotate                                                       {0% {transform: rotate(0deg);} 100% {transform: rotate(-360deg);}}
@@ -55,7 +64,30 @@ section.rodape p.footer                                                         
 
 /* RESPONSIVO
 =================================================================================================================================== */
-@media screen and (max-width: 767px)                                            {.dropdown-menu.multi-column {min-width: 240px !important; overflow-x: hidden;}
-                                                                                section.navegacao button.btn.btn-success.btn_login{display:none;}
-                                                                                
+@media screen and (min-width: 770px)                                            {
+
 }
+
+@media screen and (min-width: 751px) and (max-width:850px)                      {.dropdown-menu.multi-column {min-width: 240px !important; overflow-x: hidden;}
+                                                                                section.navegacao ul.btn{float:left; margin: 0 0 0 43%; position: absolute;}
+                                                                                }
+
+@media screen and (min-width: 630px) and (max-width:750px)                      {.dropdown-menu.multi-column {min-width: 240px !important; overflow-x: hidden;}
+                                                                                section.navegacao ul.btn{float:left; margin: -6.5% 0 0 43%; position: absolute;}
+																																								}
+
+@media screen and (min-width: 470px) and (max-width:629px)                      {.dropdown-menu.multi-column {min-width: 240px !important; overflow-x: hidden;}
+                                                                                section.navegacao ul.btn{float:left; margin: -9.5% 0 0 43%; position: absolute;}
+																																								section.rodape footer{height: 56px;}
+																																								}
+
+@media screen and (min-width: 350px) and (max-width:469px)                      {.dropdown-menu.multi-column {min-width: 240px !important; overflow-x: hidden;}
+                                                                                section.navegacao ul.btn{float:left; margin: -12.5% 0 0 43%; position: absolute;}
+																																								section.rodape footer{height: 56px;}
+																																								}
+
+
+@media (max-width:349px)                                                        {.dropdown-menu.multi-column {min-width: 240px !important; overflow-x: hidden;}
+                                                                                section.navegacao ul.btn{float:left; margin: -15.5% 0 0 40%; position: absolute;}
+																																								section.rodape footer{height: 72px;}
+                                                                                }

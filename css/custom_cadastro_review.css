@@ -3,6 +3,7 @@ textarea#message                                                                
 button.logout                                                                   {display: inline; float: right;}
 i                                                                               {float:right; margin-right: 40%; color: black}
 button.botao_cadastro                                                           {background: #2ecc71; border: 0; color: #fff; padding: 10px; font-size: 20px; width: 60%; margin: 3% 0 3% 0; display: block; cursor: pointer;}
+button.botao_cadastro:disabled                                                  {background: #2ecc71; border: 0; color: #fff; padding: 10px; font-size: 20px; width: 60%; margin: 3% 0 3% 0; display: block; cursor:not-allowed;;}
 div.bloco                                                                       {margin-left: 20%;}
 
 label.aval                                                                      {padding-top: 1%;}

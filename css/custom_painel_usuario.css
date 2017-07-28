@@ -4,7 +4,7 @@
 
 body                                                                            {margin:0px; padding:0px; font-family: "Open Sans", arial; color:#fff;	font-weight:300;}
 
-h1                                                                              {font-family: "Open Sans", arial; font-weight:300; float: left; width: 55%; margin-left: 5px;	font-size: 40px; margin-bottom: 40px;}
+h1                                                                              {font-family: "Open Sans", arial; font-weight:300; float: left; width: 100%; margin-left: 5px;	font-size: 40px; margin-bottom: 40px;}
 h2                                                                              {margin:0px; font-family: "Open Sans", arial;	font-weight:300;}
 .container                                                                      {margin:50px;	width: 1251px;	margin-top: -30px; margin-left:10px; -webkit-transform:scale(0.9);}
 a.wide, a.box                                                                   {text-decoration:none;color:#fff;	-webkit-transition: -webkit-transform 0.1s;	position:relative; overflow:hidden;}
@@ -26,3 +26,30 @@ a.wide:active, a.box:active                                                     
 .spacer3x                                                                       {width:300px;}
 
 @-webkit-keyframes                                                              galeri{ 1% {background-position: 0px 0px;} 10%{background-position: 0px 140px;} 20%{background-position: 0px 140px;} 30%{background-position: 0px 280px;} 40%{background-position: 0px 280px;} 50%{background-position: 0px 420px;} 60%{background-position: 0px 420px;} 70%{background-position: 0px 560px;} 80%{background-position: 0px 560px;} 100% {background-position: 0px 560px;}}
+
+div.linha                                                                       {display: block;}
+
+@media screen and (min-width: 770px)                                            {
+
+}
+
+@media screen and (min-width: 751px) and (max-width:850px)                      {div.container-fluid.linha{display:flex;}
+
+                                                                                }
+
+@media screen and (min-width: 630px) and (max-width:750px)                      {div.container-fluid.linha{display:flex;}
+
+                                                                                }
+
+@media screen and (min-width: 470px) and (max-width:629px)                      {div.container-fluid.linha{display:flex;}
+
+																																								}
+
+@media screen and (min-width: 350px) and (max-width:469px)                      {div.container-fluid.linha{display:flex;}
+
+																																								}
+
+
+@media (max-width:349px)                                                        {div.container-fluid.linha{display:flex;}
+
+                                                                                }
