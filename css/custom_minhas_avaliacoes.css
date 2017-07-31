@@ -22,3 +22,34 @@ th.t_exclusao                                                                   
 th.t_adicao                                                                     {width:4.5%;}
 i                                                                               {padding-right: 1px;}
 td.nota_avaliacao                                                                {font-size: 18px; font-weight: 400; color: #FF4175;}
+
+
+/* Responsivo
+=================================================================================================================================== */
+@media screen and (min-width: 882px)                                            {
+
+}
+
+@media screen and (min-width: 751px) and (max-width:882px)                      {
+                                                                                }
+
+@media screen and (min-width: 630px) and (max-width:750px)                      {
+                                                                                }
+
+@media screen and (min-width: 470px) and (max-width:629px)                      {td.nome{font-size: 12px;}
+                                                                                td.nota_avaliacao{font-size: 14px;}
+                                                                                td.comentario{font-size: 12px;}
+
+																																								}
+
+@media screen and (min-width: 350px) and (max-width:469px)                      {td.nome{font-size: 11px;}
+                                                                                td.nota_avaliacao{font-size: 12px;}
+                                                                                td.comentario{font-size: 11px;}
+
+																																								}
+
+
+@media (max-width:349px)                                                        {td.nome{font-size: 11px;}
+                                                                                td.nota_avaliacao{font-size: 12px;}
+                                                                                td.comentario{font-size: 11px;}
+                                                                                }
