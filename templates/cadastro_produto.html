@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="css/custom_cadastro_produto.css">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Didact+Gothic|Palanquin|Roboto|Roboto+Slab|Helvetica|Merryweather|Playfair+Display|Poppins|Quicksand|Varela+Round|Hammersmith+One" rel="stylesheet">
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+
+<div class="form-group bloco">
+
+<form name="cadProd">
+  <label>Novo Produto </label>
+
+  <input type="text" name="categoria" class="form-control" placeholder="Digite a Categoria do Produto.." ng-model= 'dados.categoria' required>
+  <span ng-show="cadProd.categoria.$touched && cadProd.categoria.$invalid">Preenchimento obrigatório</span>
+  <input type="text" name="nomeProd" class="form-control" placeholder="Digite o Nome e Marca do Produto.." ng-model= 'dados.nomeProd' required>
+  <span ng-show="cadProd.nome.$touched && cadProd.nomeProd.$invalid">Preenchimento obrigatório</span>
+  <input name="imagem" type="url" class="form-control" placeholder="Foto | URL" ng-model="dados.imagem" required>
+  <span ng-show="cadProd.imagem.$touched && cadProd.imagem.$invalid">Preenchimento obrigatório</span>
+
+</form>
+
+  <button class="botao_cadastro" ng-disabled="registration.nome.$invalid || registration.imagem.$invalid" ng-click="cadastrar_produto()"> Cadastrar Produto </button>
+
+</div>

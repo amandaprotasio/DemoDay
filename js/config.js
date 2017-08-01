@@ -16,6 +16,12 @@ function rotas($stateProvider, $urlRouterProvider){
         url: '/login'
     });
 
+    $stateProvider.state('cadastro_produto', {
+        templateUrl: 'templates/cadastro_produto.html',
+        controller: 'CadastroPController',
+        url: '/cadastro_produto'
+    });
+
     $stateProvider.state('cadastro_review', {
         templateUrl: 'templates/cadastro_review.html',
         controller: 'CadastroRController',
