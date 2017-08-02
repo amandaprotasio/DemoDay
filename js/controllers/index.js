@@ -53,10 +53,12 @@ function IndexController($scope, $firebaseAuth, $state, $firebaseArray, $firebas
 
 
 
-  function logout(){
+  function logout(firebaseUser){
       // Essa função encerra a sessão do usuário no Firebase. Note que nem
       // o refresh de página encerra a sessão automaticamente.
       auth.$signOut();
+      console.log(firebaseUser);
+      console.log('logout');
 
       // Além de encerrar a sessão, queremos redirecionar o usuário para a
       // página de login.
