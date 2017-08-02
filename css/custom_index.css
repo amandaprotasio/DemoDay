@@ -22,7 +22,7 @@ section.navegacao .navbar-default .navbar-nav>li>a.subsecao                     
 section.navegacao ul.btn                                                        {margin: 5px 10% -2px 0; text-align: center;}
 section.navegacao i.usuario																											{font-size: 34px; float: left; color: black; margin-right: 5%;}
 section.navegacao ul.btn a.loginU																								{list-style: none; text-decoration: none; font-weight: 700; font-size: 14px; padding:0; text-align: left; margin-left: 45%; color: black;}
-section.navegacao ul.btn span.loginU  																					{list-style: none; text-decoration: none; font-weight: 700; font-size: 14px; padding:0; text-align: left; margin-left: 0%; color: black;}
+section.navegacao ul.btn a.loginU2  																					{list-style: none; text-decoration: none; font-weight: 700; font-size: 14px; padding:0; text-align: left; margin-left: 0%; color: black;}
 section.navegacao ul.btn a.cadastroU 																						{list-style: none; text-decoration: none; font-size: 12px; padding:0;text-align: left;  margin-left: 45%;}
 section.navegacao ul.btn a.logoutU   																						{list-style: none; text-decoration: none; font-size: 12px; padding:0;text-align: left;  margin-left: 0%;}
 
