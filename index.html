@@ -1,139 +1,141 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Será que eh bom?</title>
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/custom_index.css">
-  <link href="https://fonts.googleapis.com/css?family=Didact+Gothic|Palanquin|Roboto|Roboto+Slab|Helvetica|Merryweather|Playfair+Display|Poppins|Quicksand|Varela+Round|Hammersmith+One" rel="stylesheet">
-  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-</head>
-<body ng-app="seraqueehbom">
-  <!-- ************************* BARRA DE NAVEGAÇÃO ********************************-->
-  <section class = "navegacao">
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <div class="row">
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Será que eh bom?</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom_index.css">
+    <link href="https://fonts.googleapis.com/css?family=Didact+Gothic|Palanquin|Roboto|Roboto+Slab|Helvetica|Merryweather|Playfair+Display|Poppins|Quicksand|Varela+Round|Hammersmith+One" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+  </head>
+  <body ng-app="seraqueehbom">
+    <!-- ************************* BARRA DE NAVEGAÇÃO ********************************-->
+    <section class = "navegacao">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
 
+          <div class="row">
 
-        <!-- Código para Menu Responsivo -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <div class="col-sm-2">
-          <a class="navbar-brand sera" ui-sref="home">Será que eh bom?</a>
+            <!-- Código para Menu Responsivo -->
+            <div class="navbar-header">
+
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <div class="col-sm-2">
+                <a class="navbar-brand sera" ui-sref="home">Será que eh bom?</a>
+              </div>
+
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse col-sm-6" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-left">
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown">Produtos <b class="caret"></b></a>
+                  <ul class="dropdown-menu multi-column columns-3">
+
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <ul class="multi-column-dropdown">
+                          <li class="title">Eletrônicos</li>
+                          <li><a class="subsecao" href="#">Computadores e Acessórios</a></li>
+                          <li><a class="subsecao" href="#">Celulares e Acessórios</a></li>
+                          <li><a class="subsecao" href="#">TV, Audio e Home Theater</a></li>
+                          <li><a class="subsecao" href="#">Câmera e Fotografia</a></li>
+                          <li><a class="subsecao" href="#">Escritório</a></li>
+                          <li><a class="subsecao" href="#">GPS e Acessórios para Automóveis</a></li>
+                          <li><a class="subsecao" href="#">Videogames</a></li>
+                          <li><a class="subsecao" href="#">Instrumentos Musicais</a></li>
+                        </ul>
+                      </div>
+                      <div class="col-sm-6">
+                        <ul class="multi-column-dropdown">
+                          <li class="title">Casa e Cozinha</li>
+                          <li><a class="subsecao" href="#">Móveis e Decoração</a></li>
+                          <li><a class="subsecao" href="#">Cozinha</a></li>
+                          <li><a class="subsecao" href="#">Eletrodomésticos</a></li>
+                          <li><a class="subsecao" href="#">Jardinagem</a></li>
+                          <li><a class="subsecao" href="#">Papelaria</a></li>
+                          <li role="separator" class="divider"></li>
+                          <li class="title">Perfumaria</li>
+                          <li><a class="subsecao" href="#">Beleza</a></li>
+                          <li><a class="subsecao" href="#">Perfumes</a></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                  </ul>
+                </li>
+              </ul>
+          </div><!-- /.navbar-collapse -->
+
+          <div class="col-sm-4 navbar-right btn_login_pos" ng-controller="IndexController">
+            <ul class="nav navbar-nav navbar-right btn" ui-sref="painel_usuario">
+              <li ng-hide="firebaseUser"><i class="fa fa-user-o usuario" aria-hidden="true"></i>
+                  <a ui-sref="login" class="loginU"> Entre! </a>
+                  <a ui-sref="cadastro_usuario" class="cadastroU">ou cadastre-se </a></li>
+              <li ng-show="firebaseUser"><i class="fa fa-user-o usuario" aria-hidden="true"></i>
+                  <a ui-sref="painel_usuario" class="loginU2"> {{usuario.nome}} </a>
+                  <a ui-sref="home" class="logoutU" ng-click="logout()"> Logout </a></li>
+            </ul>
           </div>
 
-        </div>
+        </div> <!-- /.row -->
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse col-sm-6" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav navbar-left">
-            <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown">Produtos <b class="caret"></b></a>
-              <ul class="dropdown-menu multi-column columns-3">
-                <div class="row">
-                  <div class="col-sm-4">
-                    <ul class="multi-column-dropdown">
-                      <li class="title">Eletrônicos</li>
-                      <li><a class="subsecao" href="#">Computadores e Acessórios</a></li>
-                      <li><a class="subsecao" href="#">Celulares e Acessórios</a></li>
-                      <li><a class="subsecao" href="#">TV, Audio e Home Theater</a></li>
-                      <li><a class="subsecao" href="#">Câmera e Fotografia</a></li>
-                      <li><a class="subsecao" href="#">Escritório</a></li>
-                      <li><a class="subsecao" href="#">GPS e Acessórios para Automóveis</a></li>
-                      <li><a class="subsecao" href="#">Videogames</a></li>
-                      <li><a class="subsecao" href="#">Instrumentos Musicais</a></li>
-                    </ul>
-                  </div>
-                  <div class="col-sm-4">
-                    <ul class="multi-column-dropdown">
-                      <li class="title">Casa e Cozinha</li>
-                      <li><a class="subsecao" href="#">Móveis e Decoração</a></li>
-                      <li><a class="subsecao" href="#">Cozinha</a></li>
-                      <li><a class="subsecao" href="#">Eletrodomésticos</a></li>
-                      <li><a class="subsecao" href="#">Jardinagem</a></li>
-                      <li><a class="subsecao" href="#">Papelaria</a></li>
-                      <li role="separator" class="divider"></li>
-                      <li class="title">Perfumaria</li>
-                      <li><a class="subsecao" href="#">Beleza</a></li>
-                      <li><a class="subsecao" href="#">Perfumes</a></li>
-                    </ul>
-                  </div>
+      </div><!-- /.container-fluid -->
+    </nav>
+  </section>
+   <!-- ********************************************************* UI VIEW *******************************************************************-->
 
-                </div>
+  <ui-view></ui-view>
 
-              </ul>
+  <!-- **************************************************************************************************************************************-->
+  <section class="rodape">
+    <footer class="f_rodape">
 
-            </li>
-          </ul>
-      </div><!-- /.navbar-collapse -->
-      <div class="col-sm-4 navbar-right btn_login_pos" ng-controller="IndexController">
-      <ul class="nav navbar-nav navbar-right btn" ui-sref="painel_usuario"> 
-        <li ng-hide="firebaseUser"><i class="fa fa-user-o usuario" aria-hidden="true"></i>
-            <a ui-sref="login" class="loginU"> Entre! </a>
-            <a ui-sref="cadastro_usuario" class="cadastroU">ou cadastre-se </a></li>
-        <li ng-show="firebaseUser"><i class="fa fa-user-o usuario" aria-hidden="true"></i>
-            <a ui-sref="painel_usuario" class="loginU2"> {{usuario.nome}} </a>
-            <a ui-sref="home" class="logoutU" ng-click="logout()"> Logout </a></li>
+      <p class="footer">Será que eh bom @ 2017 &nbsp|&nbsp Descobre com a gente &nbsp|&nbsp Contato: (11) XXXX XXXX - (11) 9XXXX XXXX</p>
 
+    </footer>
+  </section>
+  <!-- ************************* JAVASCRIPT ********************************-->
 
-      </ul>
-      </div>
-    </div> <!-- /.row -->
-    </div><!-- /.container-fluid -->
-  </nav>
-</section>
- <!-- ********************************************************* UI VIEW *******************************************************************-->
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyAJKGeTp__KWidNE2ELFv9cTIC4iWUKgRc",
+        authDomain: "seraqueehbom-5d69e.firebaseapp.com",
+        databaseURL: "https://seraqueehbom-5d69e.firebaseio.com",
+        projectId: "seraqueehbom-5d69e",
+        storageBucket: "seraqueehbom-5d69e.appspot.com",
+        messagingSenderId: "437531746640"
+      };
+      firebase.initializeApp(config);
+    </script>
 
-<ui-view></ui-view>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="bower_components/angularfire/dist/angularfire.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/ngMask.min.js"> </script>
+    <script src="js/app.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/controllers/home.js"></script>
+    <script src="js/controllers/cadastro_review.js"></script>
+    <script src="js/controllers/cadastro_usuario.js"></script>
+    <script src="js/controllers/cadastro_produto.js"></script>
+    <script src="js/controllers/painel_usuario.js"></script>
+    <script src="js/controllers/minhas_avaliacoes.js"></script>
+    <script src="js/controllers/login.js"></script>
+    <script src="js/controllers/index.js"></script>
 
-<!-- **************************************************************************************************************************************-->
-<section class="rodape">
-<footer class="f_rodape">
-
-  <p class="footer">Será que eh bom @ 2017 &nbsp|&nbsp Descobre com a gente &nbsp|&nbsp Contato: (11) XXXX XXXX - (11) 9XXXX XXXX</p>
-
-</footer>
-</section>
-<!-- ************************* JAVASCRIPT ********************************-->
-
-<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyAJKGeTp__KWidNE2ELFv9cTIC4iWUKgRc",
-    authDomain: "seraqueehbom-5d69e.firebaseapp.com",
-    databaseURL: "https://seraqueehbom-5d69e.firebaseio.com",
-    projectId: "seraqueehbom-5d69e",
-    storageBucket: "seraqueehbom-5d69e.appspot.com",
-    messagingSenderId: "437531746640"
-  };
-  firebase.initializeApp(config);
-</script>
-
-<script src="bower_components/jquery/dist/jquery.min.js"></script>
-<script src="bower_components/angular/angular.min.js"></script>
-<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
-<script src="bower_components/angularfire/dist/angularfire.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/ngMask.min.js"> </script>
-<script src="js/app.js"></script>
-<script src="js/config.js"></script>
-<script src="js/controllers/home.js"></script>
-<script src="js/controllers/cadastro_review.js"></script>
-<script src="js/controllers/cadastro_usuario.js"></script>
-<script src="js/controllers/cadastro_produto.js"></script>
-<script src="js/controllers/painel_usuario.js"></script>
-<script src="js/controllers/minhas_avaliacoes.js"></script>
-<script src="js/controllers/login.js"></script>
-<script src="js/controllers/index.js"></script>
-
-</body>
-</html>
+  </body>
+  </html>
