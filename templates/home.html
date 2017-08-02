@@ -5,40 +5,39 @@
 <!-- ************************* FUNCIONAMENTO ********************************-->
 <section class="funcionamento background">
 
-<p class="title_1"> Vem conhecer uma nova maneira de encontrar boas experiências!</p>
+  <p class="title_1"> Vem conhecer uma nova maneira de encontrar boas experiências!</p>
 
-<div class="lateral_esquerda">
-  <div class="blocao">
-  <div class="box">
-    <div class="container-1">
-      <p class="title_2"> De qual produto estamos falando?</p>
-      <span class="icon"><i class="fa fa-search" aria-hidden="true"></i></span>
-      <input type="search" id="search" placeholder="Produto" />
+  <div class="lateral_esquerda">
+
+    <div class="blocao">
+
+      <div class="box">
+        <div class="container-1">
+          <p class="title_2"> De qual produto estamos falando?</p>
+          <span class="icon"><i class="fa fa-search" aria-hidden="true"></i></span>
+          <input type="search" id="search" placeholder="Produto" />
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="container-1">
+            <p class="title_3"> Você quer:</p>
+            <div class = "linha_opt"><input type="radio" name="optionsRadios" id="optionsRadios1" required checked> <span class="alternativa"> Buscar avaliações do produto </span></div>
+            <div class = "linha_opt"><input type="radio" name="optionsRadios" id="optionsRadios2" required> <span class="alternativa"> Avaliar o produto </span></div>
+        </div>
+      </div>
+
+    </div>
+
   </div>
-</div>
 
-<div class="box">
-  <div class="container-1">
-      <p class="title_3"> Você quer:</p>
-      <div class = "linha_opt"><input type="radio" name="optionsRadios" id="optionsRadios1" required checked> <span class="alternativa"> Buscar avaliações do produto </span></div>
-      <div class = "linha_opt"><input type="radio" name="optionsRadios" id="optionsRadios2" required> <span class="alternativa"> Avaliar o produto </span></div>
-
-  </div>
-</div>
-</div>
-</div>
 </section>
 
 <section class="avaliacao">
-<h1> <i class="fa fa-heart" aria-hidden="true"></i> Você sabe quais são os produtos mais amados? </h1>
+  <h1> <i class="fa fa-heart" aria-hidden="true"></i> Você sabe quais são os produtos mais amados? </h1>
   <div class="container-fluid linha">
     <table>
-
-
-
-
-              <div class="produto" ng-repeat="review in reviews | orderBy:random | limitTo:4 ">
-
+      <div class="produto" ng-repeat="review in reviews | orderBy:random | limitTo:4 ">
                 <p> <img class="imagem" ng-src="{{review.imagem}}"></p>
                 <p class="nome">{{review.nome}}</p>
                 <p class="score">{{review.score}}</p>
@@ -50,10 +49,7 @@
                   <i class="fa fa-heart" aria-hidden="true" ng-show="review.score>=5"></i>
                 </p>
                 <p class="comentario">{{review.comment}}</p>
-
-
-            </div>
-
+      </div>
     </table>
     <!-- <div class="produto">
       <img src="images/kitchen_aid_batedeira.jpg" alt="Batedeira Kitchen Aid Vermelha" class="img-responsive center-block">

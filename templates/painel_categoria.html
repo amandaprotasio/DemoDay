@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="css/custom_painel_categoria.css">
+<link href="https://fonts.googleapis.com/css?family=Didact+Gothic|Palanquin|Roboto|Roboto+Slab|Helvetica|Merryweather|Playfair+Display|Poppins|Quicksand|Varela+Round|Hammersmith+One" rel="stylesheet">
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+<section class="banner background">
+  <p class="title_1"> Cozinha </p>
+</section>
+
+<section class="produtos_por_categoria">
+    <div class="container-fluid linha">
+      <table>
+        <div class="produto" ng-repeat="produto in produtos | orderBy:random | limitTo:4 ">
+                  <p> <img class="imagem" ng-src="{{produto.imagem}}"></p>
+                  <p class="nome">{{produto.nome}}</p>
+        </div>
+      </table>
+
+    </div>
+
+</section>

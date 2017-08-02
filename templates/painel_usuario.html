@@ -9,24 +9,33 @@
 <div class="container-fluid linha">
 
   <div class='spacer'>
-    <div class="sm-col-4">
-    <a href="javascript://" class='wide blue' ui-sref="cadastro_review">
-      <i class="fa fa-thermometer-full"></i>
-      <h2>Faça sua análise</h2>
-    </a>
-  </div>
-  <div class="sm-col-4">
-    <a href="javascript://" class='wide orange' ui-sref="minhas_avaliacoes">
-      <i class="fa fa-book"></i>
-      <h2>Reveja suas análises</h2>
-    </a>
-  </div>
+
+    <div class="sm-col-3">
+      <a href="javascript://" class='wide blue' ui-sref="cadastro_review">
+        <i class="fa fa-thermometer-full"></i>
+        <h2>Faça sua análise</h2>
+      </a>
+    </div>
+    <div class="sm-col-3">
+      <a href="javascript://" class='wide orange' ui-sref="minhas_avaliacoes">
+        <i class="fa fa-book"></i>
+        <h2>Reveja suas análises</h2>
+      </a>
+    </div>
     <div ng-show="admin">
-    <a href="javascript://" class='wide redgay' ui-sref="cadastro_produto">
-      <i class="fa fa-pencil-square-o" ></i>
-      <h2>Cadastro de Produtos</h2>
-    </a>
-  </div>
+      <a href="javascript://" class='wide redgay' ui-sref="cadastro_produto">
+        <i class="fa fa-pencil-square-o" ></i>
+        <h2>Cadastro de Produtos</h2>
+      </a>
+    </div>
+    <div ng-show="admin">
+      <a href="javascript://" class='wide yellow' ui-sref="cadastro_categoria">
+        <i class="fa fa-plus-square-o" ></i>
+        <h2>Cadastro de Categorias</h2>
+      </a>
+    </div>
+
+
   </div>
 
 </div>

@@ -22,6 +22,12 @@ function rotas($stateProvider, $urlRouterProvider){
         url: '/cadastro_produto'
     });
 
+    $stateProvider.state('cadastro_categoria', {
+        templateUrl: 'templates/cadastro_categoria.html',
+        controller: 'CadastroCController',
+        url: '/cadastro_categoria'
+    });
+
     $stateProvider.state('cadastro_review', {
         templateUrl: 'templates/cadastro_review.html',
         controller: 'CadastroRController',
@@ -50,6 +56,21 @@ function rotas($stateProvider, $urlRouterProvider){
         templateUrl: 'index.html',
         controller: 'IndexController'
     });
+
+    $stateProvider.state('painel_categoria', {
+        templateUrl: 'templates/painel_categoria.html',
+        controller: 'PainelCController',
+        url: '/painel_categoria'
+    });
+
+    $stateProvider.state('painel_produto', {
+        templateUrl: 'templates/painel_produto.html',
+        controller: 'PainelPController',
+        url: '/painel_produto'
+    });
+
+
+
 
     // O $urlRouterProvider permite, entre outras coisas, que seja definida
     // uma rota padrão que usada como padrão caso nenhuma outra rota esteja

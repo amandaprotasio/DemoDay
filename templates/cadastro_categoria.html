@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="css/custom_cadastro_categoria.css">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Didact+Gothic|Palanquin|Roboto|Roboto+Slab|Helvetica|Merryweather|Playfair+Display|Poppins|Quicksand|Varela+Round|Hammersmith+One" rel="stylesheet">
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+
+<div class="form-group bloco">
+
+<form name="cadCateg">
+  <a ui-sref="painel_usuario"><i class="fa fa-backward"></i></a> <label>Nova Categoria </label>
+  <input type="text" name="categoria" class="form-control" placeholder="Digite a Categoria do Produto.." ng-model= 'dados.categoria' required>
+  <span ng-show="cadProd.categoria.$touched && cadProd.categoria.$invalid">Preenchimento obrigatório</span>
+</form>
+
+  <button class="botao_cadastro" ng-disabled="cadProd.categoria.$invalid" ng-click="cadastrar_categoria()"> Cadastrar Categoria </button>
+
+</div>
+
+<label>Lista de Categorias</label>
+
+
+<table>
+
+</table>

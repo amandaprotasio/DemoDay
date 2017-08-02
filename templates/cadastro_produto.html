@@ -8,9 +8,7 @@
 
 <form name="cadProd">
   <a ui-sref="painel_usuario"><i class="fa fa-backward"></i></a> <label>Novo Produto </label>
-
-  <input type="text" name="categoria" class="form-control" placeholder="Digite a Categoria do Produto.." ng-model= 'dados.categoria' required>
-  <span ng-show="cadProd.categoria.$touched && cadProd.categoria.$invalid">Preenchimento obrigatório</span>
+  <select name="categoria" class="form-control" ng-model="dados.categoria" ng-options="categoria.categoria for categoria in categorias" placeholder="Escolha uma Categoria...">  </select>
   <input type="text" name="nomeProd" class="form-control" placeholder="Digite o Nome e Marca do Produto.." ng-model= 'dados.nomeProd' required>
   <span ng-show="cadProd.nome.$touched && cadProd.nomeProd.$invalid">Preenchimento obrigatório</span>
   <input name="imagem" type="url" class="form-control" placeholder="Foto | URL" ng-model="dados.imagem" required>
@@ -18,6 +16,6 @@
 
 </form>
 
-  <button class="botao_cadastro" ng-disabled="registration.nome.$invalid || registration.imagem.$invalid" ng-click="cadastrar_produto()"> Cadastrar Produto </button>
+  <button class="botao_cadastro" ng-disabled="cadProd.categoria.$invalid || cadProd.nome.$invalid || cadProd.imagem.$invalid" ng-click="cadastrar_produto()"> Cadastrar Produto </button>
 
 </div>

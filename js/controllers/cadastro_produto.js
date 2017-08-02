@@ -5,9 +5,12 @@ function CadastroPController($scope, $firebaseArray, $firebaseAuth, $firebaseObj
   var produtos;
   var auth = $firebaseAuth();
   var usuario;
+  var ref_categoria = firebase.database().ref('categorias');
 
   $scope.dados = {};
   $scope.cadastrar_produto = cadastrar_produto;
+  $scope.categorias = $firebaseArray(ref_categoria);
+
 
   auth.$onAuthStateChanged(buscar_usuario);
 
