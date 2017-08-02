@@ -42,7 +42,7 @@
                   <ul class="dropdown-menu multi-column columns-3">
 
                     <div class="row">
-                      <div class="col-sm-6">
+                      <div class="col-sm-4">
                         <ul class="multi-column-dropdown">
                           <li class="title">Eletrônicos</li>
                           <li><a class="subsecao" href="#">Computadores e Acessórios</a></li>
@@ -55,7 +55,7 @@
                           <li><a class="subsecao" href="#">Instrumentos Musicais</a></li>
                         </ul>
                       </div>
-                      <div class="col-sm-6">
+                      <div class="col-sm-4">
                         <ul class="multi-column-dropdown">
                           <li class="title">Casa e Cozinha</li>
                           <li><a class="subsecao" href="#">Móveis e Decoração</a></li>
@@ -77,7 +77,8 @@
           </div><!-- /.navbar-collapse -->
 
           <div class="col-sm-4 navbar-right btn_login_pos" ng-controller="IndexController">
-            <ul class="nav navbar-nav navbar-right btn" ui-sref="painel_usuario">
+            <!-- <ul class="nav navbar-nav navbar-right btn" ui-sref="painel_usuario"> -->
+            <ul class="nav navbar-nav navbar-right btn">
               <li ng-hide="firebaseUser"><i class="fa fa-user-o usuario" aria-hidden="true"></i>
                   <a ui-sref="login" class="loginU"> Entre! </a>
                   <a ui-sref="cadastro_usuario" class="cadastroU">ou cadastre-se </a></li>
