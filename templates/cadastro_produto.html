@@ -8,7 +8,9 @@
 
 <form name="cadProd">
   <a ui-sref="painel_usuario"><i class="fa fa-backward"></i></a> <label>Novo Produto </label>
-  <select name="categoria" class="form-control" ng-model="dados.categoria" ng-options="categoria.categoria for categoria in categorias" placeholder="Escolha uma Categoria...">  </select>
+  <select name="categoria" class="form-control" ng-model="dados.categoria" ng-options="categoria.categoria for categoria in categorias" placeholder="Escolha uma Categoria...">
+    <option value='' disabled selected>Selecione uma Categoria...</option>
+  </select>
   <input type="text" name="nomeProd" class="form-control" placeholder="Digite o Nome e Marca do Produto.." ng-model= 'dados.nomeProd' required>
   <span ng-show="cadProd.nome.$touched && cadProd.nomeProd.$invalid">Preenchimento obrigatório</span>
   <input name="imagem" type="url" class="form-control" placeholder="Foto | URL" ng-model="dados.imagem" required>

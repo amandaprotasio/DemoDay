@@ -22,6 +22,8 @@ function CadastroPController($scope, $firebaseArray, $firebaseAuth, $firebaseObj
     console.log($scope.dados)
     var produto = $firebaseArray(ref_produto);
     $scope.dados.usuario_uid = usuario.uid;
+    var categoria = $scope.dados.categoria.categoria;
+    $scope.dados.categoria = categoria;
     produto.$add($scope.dados);
 
     $state.go('painel_usuario');  }
