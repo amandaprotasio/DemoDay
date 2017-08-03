@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="css/custom_painel_categoria.css">
+<link href="https://fonts.googleapis.com/css?family=Didact+Gothic|Palanquin|Roboto|Roboto+Slab|Helvetica|Merryweather|Playfair+Display|Poppins|Quicksand|Varela+Round|Hammersmith+One" rel="stylesheet">
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+<section class="banner background">
+  <p class="title_1"> Produto </p>
+</section>
+
+
+<section class="detalhe_produto">
+
+  <div class="container-fluid linha">
+    <table>
+      <div class="produto">
+        <p> <img class="imagem" ng-src="{{produto.imagem}}"></p>
+        <p class="nome">{{produto.nomeProd}}</p>
+      </div>
+    </table>
+  </div>
+
+  <div class="container-fluid linha">
+    <table>
+      <div class="review" ng-repeat="review in reviews">
+        <p class="comment">{{review.comment}}</p>
+        <p class="score">{{review.score}}</p>
+      </div>
+    </table>
+  </div>
+
+
+</section>

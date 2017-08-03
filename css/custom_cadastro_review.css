@@ -1,4 +1,5 @@
 input.form-control                                                              {width:60%; margin-top: 10px}
+select.form-control                                                             {width:60%; margin-top: 10px}
 textarea#message                                                                {width:60%; margin-top: 10px}
 button.logout                                                                   {display: inline; float: right;}
 i                                                                               {float:right; margin-right: 40%; color: black}
@@ -25,6 +26,7 @@ label.fa.fa-heart:hover                                                         
 
 @media screen and (min-width: 751px) and (max-width:882px)                      {div.bloco{margin-left: 8%;}
                                                                                  input.form-control{width:430px;}
+                                                                                 select.form-control{width:430px;}
                                                                                  textarea#message{width:430px;}
                                                                                  button.botao_cadastro{width: 430px}
                                                                                  button.botao_cadastro:disabled{width: 430px}
@@ -33,6 +35,7 @@ label.fa.fa-heart:hover                                                         
 
 @media screen and (min-width: 630px) and (max-width:750px)                      {div.bloco{margin-left: 8%;}
                                                                                 input.form-control{width:430px;}
+                                                                                select.form-control{width:430px;}
                                                                                 textarea#message{width:430px;}
                                                                                 button.botao_cadastro{width: 430px}
                                                                                 button.botao_cadastro:disabled{width: 430px}
@@ -41,6 +44,7 @@ label.fa.fa-heart:hover                                                         
 
 @media screen and (min-width: 470px) and (max-width:629px)                      {div.bloco{margin-left: 2%;}
                                                                                 input.form-control{width:430px;}
+                                                                                select.form-control{width:430px;}
                                                                                 textarea#message{width:430px;}
                                                                                 button.botao_cadastro{width: 430px}
                                                                                 button.botao_cadastro:disabled{width: 430px}
@@ -50,6 +54,7 @@ label.fa.fa-heart:hover                                                         
 
 @media screen and (min-width: 350px) and (max-width:469px)                      {div.bloco{margin-left: 2%;}
                                                                                 input.form-control{width:350px;}
+                                                                                select.form-control{width:350px;}
                                                                                 textarea#message{width:350px;}
                                                                                 button.botao_cadastro{width: 350px}
                                                                                 button.botao_cadastro:disabled{width: 350px}
@@ -62,6 +67,7 @@ label.fa.fa-heart:hover                                                         
 
 @media (max-width:349px)                                                        {div.bloco{margin-left: 2%;}
                                                                                 input.form-control{width:100%;}
+                                                                                select.form-control{width:100%;}
                                                                                 textarea#message{width:100%;}
                                                                                 button.botao_cadastro{width: 100%}
                                                                                 button.botao_cadastro:disabled{width: 100%}

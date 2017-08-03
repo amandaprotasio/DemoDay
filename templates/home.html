@@ -39,7 +39,7 @@
     <table>
       <div class="produto" ng-repeat="review in reviews | orderBy:random | limitTo:4 ">
                 <p> <img class="imagem" ng-src="{{review.imagem}}"></p>
-                <p class="nome">{{review.nome}}</p>
+                <p class="nome">{{review.nomeProd}}</p>
                 <p class="score">{{review.score}}</p>
                 <p class="nota_avaliacao">
                   <i class="fa fa-heart" aria-hidden="true" ng-show="review.score>=1"></i>
