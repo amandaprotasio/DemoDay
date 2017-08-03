@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="css/custom_painel_categoria.css">
+<link href="https://fonts.googleapis.com/css?family=Didact+Gothic|Palanquin|Roboto|Roboto+Slab|Helvetica|Merryweather|Playfair+Display|Poppins|Quicksand|Varela+Round|Hammersmith+One" rel="stylesheet">
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+<section class="banner background">
+  <p class="title_1"> Produto </p>
+</section>
+
+
+<section class="detalhe_produto" ng-controller="PainelPController">
+
+
+  <div class="container-fluid linha">
+
+      <div class="produto sm-col-6">
+        <p> <img class="imagem" ng-src="http://kitchenaid.vteximg.com.br/arquivos/ids/157165-400-400/KitchenAid_Batedeira_KEC97A3_Imagem_Lateral_FundoBranco_800x800.jpg"></p>
+        <p class="nome">Batedeira KitchenAid Stand Mixer 10 Velocidades</p>
+        <p class="nota_avaliacao">
+        <i class="fa fa-heart" aria-hidden="true"></i><i class="fa fa-heart" aria-hidden="true"></i><i class="fa fa-heart" aria-hidden="true"></i><i class="fa fa-heart" aria-hidden="true"></i><i class="fa fa-heart" aria-hidden="true"></i>
+        </p>
+
+      </div>
+
+      <div class="comentario sm-col-6">
+        <p class="comment">1. Uma ótima batedeira</p>
+        <p class="comment">2. Meus bolos nunca mais foram os mesmos depois dessa batedeira!</p>
+        <p class="comment">3. A massa de macarrão que eles ensinam a fazer poderia ficar menos úmida.</p>
+      </div>
+  </div>
+
+  <div class="container-fluid linha">
+    <table>
+      <div class="review" ng-repeat="review in reviews">
+
+
+      </div>
+    </table>
+  </div>
+
+
+</section>
