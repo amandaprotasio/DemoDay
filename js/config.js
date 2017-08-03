@@ -69,6 +69,11 @@ function rotas($stateProvider, $urlRouterProvider){
         url: '/painel_produto'
     });
 
+    $stateProvider.state('painel_produto2', {
+        templateUrl: 'templates/painel_produto2.html',
+        controller: 'PainelPController2',
+        url: '/painel_produto2'
+    });
 
 
 

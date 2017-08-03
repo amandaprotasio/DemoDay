@@ -16,7 +16,7 @@ function PainelCController($firebaseArray, $scope, $filter, $rootScope, $state){
 
     $rootScope.$broadcast('sendProd', { nomeProd: nomeProd } );
 
-    $state.go('painel_produto');
+    $state.go('painel_produto2');
   }
 
 }
