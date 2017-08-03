@@ -8,7 +8,8 @@ function PainelPController($firebaseArray, $firebaseObject, $scope, $filter, $ro
 
   var refProdutos = firebase.database().ref('produtos');
   var query = refProdutos.orderByChild("nomeProd").equalTo('Liquidificador Arno');
-  $scope.produto = $firebaseObject(query);
+
+  $scope.produto = $firebaseArray(query);
 
 
   $scope.$on('sendProd', function (getProd, args) {
@@ -16,11 +17,11 @@ function PainelPController($firebaseArray, $firebaseObject, $scope, $filter, $ro
 
 
     var refProdutos = firebase.database().ref('produtos/' + $scope.produto.$id);
-    var ref_review = refUsers.child('reviews');
+    var ref_review = refProdutos.child('reviews');
     $scope.reviews = $firebaseArray(ref_review);
 
-
-  };
+console.log($scope.reviews);
+  });
 
 
   function getProd(event, nomeProd) {
