@@ -1,7 +1,7 @@
 angular.module('seraqueehbom').controller("CadastroRController", CadastroRController);
 
 function CadastroRController($scope, $firebaseArray, $firebaseAuth, $firebaseObject, $state){
-  var ref_review = firebase.database().ref('reviews');//.child(id);
+
   var reviews;
   var auth = $firebaseAuth();
   var usuario;
@@ -12,8 +12,7 @@ function CadastroRController($scope, $firebaseArray, $firebaseAuth, $firebaseObj
   $scope.cadastrar_review = cadastrar_review;
   $scope.OnChangeCategoria = OnChangeCategoria;
   $scope.categorias = $firebaseArray(ref_categoria);
-
-
+  $scope.OnChangeProduto = OnChangeProduto;
 
 function OnChangeCategoria() {
   console.log('OnChangeCategoria', $scope.dados.categoria);
@@ -23,6 +22,10 @@ function OnChangeCategoria() {
     $scope.produtos = $firebaseArray(query);
   }
 
+}
+
+function OnChangeProduto(){
+  console.log($scope.dados.nomeProd.$id);
 }
 
   //
@@ -35,10 +38,17 @@ function OnChangeCategoria() {
 
 
   function cadastrar_review(){
-    console.log($scope.dados)
-    var review = $firebaseArray(ref_review);
+    console.log($scope.dados);
     $scope.dados.usuario_uid = usuario.uid;
-    review.$add($scope.dados);
+    var ref_produto = firebase.database().ref('produtos');
+    var ref_review = ref_produto.child($scope.dados.nomeProd.$id);
+    var newReview = ref_review.child('reviews').push();
+
+    newReview.set({
+      usuario_uid: usuario.uid,
+      comment:     $scope.dados.comment,
+      score:       $scope.dados.score
+    });
 
     $state.go('painel_usuario');  }
 }

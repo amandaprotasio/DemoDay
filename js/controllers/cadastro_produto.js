@@ -24,7 +24,7 @@ function CadastroPController($scope, $firebaseArray, $firebaseAuth, $firebaseObj
     $scope.dados.usuario_uid = usuario.uid;
     var categoria = $scope.dados.categoria.categoria;
     $scope.dados.categoria = categoria;
+    $scope.dados.reviews = [];
     produto.$add($scope.dados);
-
     $state.go('painel_usuario');  }
 }

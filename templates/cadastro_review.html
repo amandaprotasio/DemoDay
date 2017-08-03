@@ -14,7 +14,7 @@
     <option value='' disabled selected>Selecione uma Categoria...</option>
   </select>
 
-  <select name="produto" class="form-control" ng-model="dados.nomeProd" ng-options="produto.nomeProd for produto in produtos" >
+  <select name="produto" class="form-control" ng-model="dados.nomeProd" ng-options="produto.nomeProd for produto in produtos" ng-change='OnChangeProduto()' >
     <option value='' disabled selected>Selecione um Produto...</option>
   </select>
 
