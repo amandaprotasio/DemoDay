@@ -40,6 +40,8 @@ function OnChangeProduto(){
   function cadastrar_review(){
     console.log($scope.dados);
     $scope.dados.usuario_uid = usuario.uid;
+
+// Cadastra na tabela de Produtos uma nova Review
     var ref_produto = firebase.database().ref('produtos');
     var ref_review = ref_produto.child($scope.dados.nomeProd.$id);
     var newReview = ref_review.child('reviews').push();
@@ -49,6 +51,33 @@ function OnChangeProduto(){
       comment:     $scope.dados.comment,
       score:       $scope.dados.score
     });
+
+// Cadastra na tabela de Users uma nova Review
+    var ref_users = firebase.database().ref('users');
+    var ref_review_user = ref_users.child($scope.dados.usuario_uid);
+    var newReview_user = ref_review_user.child('reviews').push();
+
+    newReview_user.set({
+      idProd:   $scope.dados.nomeProd.$id,
+      nomeProd: $scope.dados.nomeProd.nomeProd,
+      imagem:   $scope.dados.nomeProd.imagem,
+      comment: $scope.dados.comment,
+      score:   $scope.dados.score
+    });
+
+// Cadastra na Tabela Geral de Reviews
+  var ref_reviews = firebase.database().ref('reviews');
+  var newReview   = ref_reviews.push();
+
+  newReview.set({
+    idProd:   $scope.dados.nomeProd.$id,
+    nomeProd: $scope.dados.nomeProd.nomeProd,
+    imagem:   $scope.dados.nomeProd.imagem,
+    comment: $scope.dados.comment,
+    score:   $scope.dados.score,
+    usuario_uid: usuario.uid
+  });
+
 
     $state.go('painel_usuario');  }
 }

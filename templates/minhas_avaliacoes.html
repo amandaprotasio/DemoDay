@@ -15,12 +15,13 @@
           <th class="t_exclusao"></th>
           <th class="t_adicao"><a ui-sref="cadastro_review"><span class="table-add fa fa-plus"></span></a></th>
         </tr>
-        <tr ng-repeat="review in reviews" ng-if="review.usuario_uid==usuario.uid && admin==false ">
+        <!-- <tr ng-repeat="review in reviews" ng-if="review.usuario_uid==usuario.uid && admin==false "> -->
+            <tr ng-repeat="review in reviews" ng-if="admin==false ">
             <td> <img class="imagem" ng-src="{{review.imagem}}"></td>
-            <td class="nome">{{review.nome}}</td>
+            <td class="nome">{{review.nomeProd}}</td>
             <!-- <td class="score">{{review.score}}</td> -->
             <td class="nota_avaliacao"><i class="fa fa-heart" aria-hidden="true" ng-show="{{review.score}}>='1'"></i><i class="fa fa-heart" aria-hidden="true" ng-show="{{review.score}}>='2'"></i><i class="fa fa-heart" aria-hidden="true" ng-show="{{review.score}}>='3'"></i><i class="fa fa-heart" aria-hidden="true" ng-show="{{review.score}}>='4'"> </i><i class="fa fa-heart" aria-hidden="true" ng-show="{{review.score}}>='5'"></i> </td>
-            <td class="comentario">{{review.$id.comment}}</td>
+            <td class="comentario">{{review.comment}}</td>
             <td><span class="fa fa-times table-remove" ng-click="excluir(review)"></span></td>
             <td></td>
 
